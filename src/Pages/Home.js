@@ -9,7 +9,7 @@ const Home = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("loggedin");
-    navigate("/");
+    navigate("/login");
   };
 
   return (
@@ -19,9 +19,9 @@ const Home = () => {
         <div class="card-body">
           <h5 class="card-title">Hi {userName.email}!</h5>
           <p class="card-text">Welcome to this React app!</p>
-          <Link class="btn btn-primary" onClick={handleLogout} type="button">
+          <button class="btn btn-primary" onClick={handleLogout} type="button">
             Log out
-          </Link>
+          </button>
         </div>
       </div>
     </>
